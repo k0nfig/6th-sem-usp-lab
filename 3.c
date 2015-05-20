@@ -8,7 +8,7 @@ void main(int argc,char **argv)
 	int fd;
 	char buf[150];
 	struct flock f;
-        //Provide 2 arguments. ./a.out and the filename
+        //Provide 2 arguments. ./a.out and the filename!
 	if(argc!=2)
 	{
 		perror("Input error");
