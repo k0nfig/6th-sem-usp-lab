@@ -30,4 +30,4 @@ void main()
 	}
 }
 // For best results : Always compile before pressing ./a.out everytime
-//Compile each and everytime before executing to get different answers!
+//Compile each and everytime before executing to get different answers!!
