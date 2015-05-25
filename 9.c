@@ -14,6 +14,7 @@ void func(char *cmd)//Recieves the command
 	else if(pid==0)
 	{
 		execl("/bin/sh","sh","-c",cmd,NULL);//exec is called to give the child a new job, here to execute the shell
+                //-c is given to instruct exec function that the command is given through a pointer cmd
 	}
 }
 
