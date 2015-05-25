@@ -15,14 +15,14 @@ int main(int argc,char **argv)
 		perror("Input error");
 		return 0;
 	}
+	cout<<"Enter Data\n";
+	gets(buf);
 	if((access(argv[1],F_OK))==-1)
 	{
 		mkfifo(argv[1],0777);
 		cout<<"File created!\n";
 	}
 	fd=open(argv[1],O_WRONLY);
-	cout<<"Enter Data\n";
-	gets(buf);
 	res=write(fd,buf,sizeof(buf));
 	if(res==-1)
 	{
