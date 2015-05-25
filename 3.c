@@ -31,6 +31,8 @@ void main(int argc,char **argv)
 		return;
 	}
 	printf("Locked\n");
+	getchar();//to check in the other terminal for locking condition. Press enter key again!
+	//Press ctl+shift+t for new terminal
 	if(lseek(fd,SEEK_END-50,SEEK_END)==-1)//Cursor should point in the last 50th position
 	{
 		perror("Lseek error");
