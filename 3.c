@@ -26,7 +26,9 @@ void main(int argc,char **argv)
 	if((fcntl(fd,F_SETLK,&f))==-1) // SETLOCK : If the lock is being set by other process then it returns -1
 	{
 		fcntl(fd,F_GETLK,&f); //F_GETLK=Get the details of the process which has locked the file and store it in f
+		printf("Cannot lock Already locked file\n")
 		printf("Pid is %d\n",f.l_pid);//Printing pid of the process which has locked it!
+		return;
 	}
 	printf("Locked\n");
 	if(lseek(fd,SEEK_END-50,SEEK_END)==-1)//Cursor should point in the last 50th position
