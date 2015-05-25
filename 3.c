@@ -20,9 +20,9 @@ void main(int argc,char **argv)
 	getchar();
         //Defining all the locking conditions
 	f.l_type=F_WRLCK; //Type of lock : Write lock
-	f.l_whence=SEEK_SET; //Cursor pointing : Beginning of the file
-	f.l_start=0;//Start : from the beginning of the file(i.e 0)
-	f.l_len=100;//Length of lock: Till the 100th character from start
+	f.l_whence=SEEK_END; //Cursor pointing : End of the file
+	f.l_start=SEEK_END-100;//Start : last 100 characters from the end of the file(i.e 0)
+	f.l_len=100;//Length of lock: Till 100 characters from the last 100th character
 	if((fcntl(fd,F_SETLK,&f))==-1) // SETLOCK : If the lock is being set by other process then it returns -1
 	{
 		fcntl(fd,F_GETLK,&f); //F_GETLK=Get the details of the process which has locked the file and store it in f
