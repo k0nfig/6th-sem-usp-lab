@@ -20,7 +20,7 @@ void main()
 /*void main()
 {
 	struct sigaction action;//Creating a structure object called action
-	sigemptyset(&(action.sa_mask));//Clearing junk mask values inside the action object
+	//sigemptyset(&(action.sa_mask));//Clearing junk mask values inside the action object
 	action.sa_handler=callme;//the handler should be call me
 	if((sigaction(SIGALRM,&action,0))==-1)//Read the statement like this : If a signal called SIGALRM arrives handle it by the information given in action
 	{
