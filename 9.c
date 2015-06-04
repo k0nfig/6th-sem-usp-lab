@@ -16,6 +16,7 @@ void func(char *cmd)//Recieves the command
 		execl("/bin/sh","sh","-c",cmd,NULL);//exec is called to give the child a new job, here to execute the shell
                 //-c is given to instruct exec function that the command is given through a pointer cmd
 	}
+	wait();//To make the command prompt get back after the execution of the command
 }
 
 void main(int argc,char **argv)
