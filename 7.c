@@ -19,6 +19,8 @@ void main()
 	{
 		//wait(&stat);
 		system("ps -o stat,comm,pid,ppid,tty");
+		//If your teacher is asking you to print only the zombie's status uncomment the below line
+		//system("ps -o stat,comm,pid,ppid,tty | grep 'Z'");
 		exit(0);
 	}
 }
